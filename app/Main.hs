@@ -5,7 +5,7 @@ import GHCJS.Types (JSVal)
 import GHCJS.Marshal (toJSVal)
 
 foreign import javascript unsafe
-  "require('console').log($1)" console_log :: S.JSString -> IO ()
+  "console.log($1)" console_log :: S.JSString -> IO ()
 
 ukaraa = "Yo soy Ukaraa, la serpiente bicauda"
 ukaraaIO = imprimirAlgoMas . console_log . S.pack $ ukaraa
