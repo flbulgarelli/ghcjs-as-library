@@ -1,4 +1,3 @@
 .stack-work/
 jsample.cabal
 *~
-ghcjslib/build/**

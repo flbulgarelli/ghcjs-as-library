@@ -1,0 +1,62 @@
+-- This file has been generated from package.yaml by hpack version 0.28.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 0ac8a68ee9d17065c2b04ec6fb4d01a043d71bb3022be2b8309593d2cbc9a255
+
+name:           ghcjslib-demo
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/flbulgarelli/ghcjslib>
+homepage:       https://github.com/flbulgarelli/ghcjslib-demo#readme
+bug-reports:    https://github.com/flbulgarelli/ghcjslib-demo/issues
+author:         Franco Leonardo Bulgarelli
+maintainer:     franco@mumuki.org
+copyright:      2018 Franco Leonardo Bulgarelli
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/flbulgarelli/ghcjslib-demo
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_ghcjslib_demo
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable ghcjslib-demo
+  main-is: Main.hs
+  other-modules:
+      Paths_ghcjslib_demo
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , ghcjs-base
+    , ghcjslib-demo
+  default-language: Haskell2010
+
+test-suite ghcjslib-demo-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_ghcjslib_demo
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , ghcjslib-demo
+  default-language: Haskell2010
